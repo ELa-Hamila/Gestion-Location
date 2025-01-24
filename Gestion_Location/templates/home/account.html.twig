@@ -1,0 +1,65 @@
+{# templates/home/account.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}RentEase creaion de compte {% endblock %}
+{% block head %}
+<head>
+    <title>RentEase creaion de compte</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet">
+</head>
+{% endblock %}
+{% block body %}
+<body class="bg-no-repeat bg-cover bg-center" style="background-image: url('https://luxury-houses.net/wp-content/uploads/2020/09/An-Unforgettably-Elegant-Delray-Beach-Home-for-Sale-23-768x511.jpg');">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+<div class="relative min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center"
+     style="background-image:url('https://luxury-houses.net/wp-content/uploads/2020/09/An-Unforgettably-Elegant-Delray-Beach-Home-for-Sale-23-768x511.jpg');">
+    <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
+    <div class="max-w-md w-full space-y-8 p-10 bg-white rounded-xl z-10">
+        <div class="text-center">
+            <h2 class="mt-6 text-3xl font-bold text-gray-900">
+               Bienvenue a RentEase
+            </h2>
+            <p class="mt-2 text-sm text-gray-600">Please create your account</p>
+        </div>
+        <form class="mt-8 space-y-6" th:action="@{/users/create}" method="POST">
+            <input type="hidden" name="remember" value="true">
+            <div class="relative">
+                <div class="absolute right-0 mt-4"><svg xmlns="http://www.w3.org/2000/svg"
+                                                        class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                          d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg></div>
+
+                <div class="mt-8 content-center">
+                    <label class="text-sm font-bold text-gray-700 tracking-wide">Nom</label>
+                    <input class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" id="nom" name="nom" type="text" placeholder="Enter your name" >
+                </div>
+
+                <div class="mt-8 content-center">
+                    <label class="text-sm font-bold text-gray-700 tracking-wide">Prenom</label>
+                    <input class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" id="prenom" name="prenom" type="text" placeholder="Enter your first name" >
+                </div>
+
+                <div class="mt-8 content-center">
+                <label class="text-sm font-bold text-gray-700 tracking-wide">Email</label>
+                <input class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" id="email"name="email" type="email" placeholder="mail@gmail.com">
+                </div>
+
+            <div class="mt-8 content-center">
+                <label class="text-sm font-bold text-gray-700 tracking-wide">Password</label>
+                <input class="w-full content-center text-base py-2 border-b border-gray-300 focus:outline-none focus:border-indigo-500" id="password" name="password" type="password" placeholder="Enter your password" >
+            </div><br><br>
+            <div>
+                <button type="submit" class="w-full flex justify-center bg-indigo-500 text-gray-100 p-4  rounded-full tracking-wide
+                                font-semibold  focus:outline-none focus:shadow-outline hover:bg-indigo-600 shadow-lg cursor-pointer transition ease-in duration-300">
+                    create account
+                </button>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+{% endblock %}

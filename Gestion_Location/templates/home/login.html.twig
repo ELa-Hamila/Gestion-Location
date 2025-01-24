@@ -1,0 +1,54 @@
+{# templates/home/login.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}RentEase Login{% endblock %}
+{% block head %}
+<head>
+    <meta charset="UTF-8">
+    <title>Home EventSphere</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet">
+</head>
+{% endblock %}
+{% block body %}
+<body class="bg-no-repeat bg-cover bg-center" style="background-image: url('https://luxury-houses.net/wp-content/uploads/2020/09/An-Unforgettably-Elegant-Delray-Beach-Home-for-Sale-23-768x511.jpg');">
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<div class="flex items-center justify-center h-screen">
+    <div class="p-12 bg-white mx-auto rounded-2xl max-w-lg">
+        <div class="mb-4">
+            <h3 class="font-semibold text-2xl text-gray-800">Sign In </h3>
+            <p class="text-gray-500">Please sign in to your account.</p>
+        </div>
+        <form action="/home/accueil" method="post">
+            <div class="space-y-5">
+                <div class="space-y-2">
+                    <label for="email" class="text-sm font-medium text-gray-700 tracking-wide">Email</label>
+                    <input id="email" name="email" class="w-full text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-400" type="email" placeholder="mail@gmail.com">
+                </div>
+                <div class="space-y-2">
+                    <label for="password" class="mb-5 text-sm font-medium text-gray-700 tracking-wide">Password</label>
+                    <input id="password" name="password" class="w-full content-center text-base px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-green-400" type="password" placeholder="Enter your password">
+                </div>
+                <div class="flex items-center justify-between">
+                    <div class="text-sm">
+                        <a href="/users/create" class="text-green-400 hover:text-green-500">Create account?</a>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="w-full flex justify-center bg-blue-400 hover:bg-blue-500 text-gray-100 p-3 rounded-full tracking-wide font-semibold shadow-lg cursor-pointer transition ease-in duration-500">
+                        Sign in
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <div class="pt-5 text-center text-gray-400 text-xs">
+            <span>
+                Copyright © 2023-2024
+                <a href="https://codepen.io/uidesignhub" rel="" target="_blank" title="Ajimon" class="text-green hover:text-green-500 ">EventSphere</a>
+            </span>
+        </div>
+    </div>
+</div>
+
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+{% endblock %}

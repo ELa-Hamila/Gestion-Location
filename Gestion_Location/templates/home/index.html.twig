@@ -1,0 +1,85 @@
+{# templates/home/index.html.twig #}
+{% extends 'base.html.twig' %}
+{% block title %}RentEase{% endblock %}
+{% block head %}
+<head>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+{% block javascripts %}
+{{ encore_entry_script_tags('app') }}
+{% endblock %}
+</head>
+{% endblock %}
+
+{% block body %}
+    <!-- component -->
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: {"50":"#fff5f0","100":"#ffd6c2","200":"#feb795","300":"#fe9868","400":"#fd783c","500":"#fb580f","600":"#db4603","700":"#b03802","800":"#862b01","900":"#5a1d00","950":"#2f0f00"}
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+   <!-- component -->
+    <div class="w-full">
+        <nav class="bg-white shadow-lg">
+            <div class="md:flex items-center justify-between py-2 px-8 md:px-12">
+                <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-gray-800 md:text-3xl">
+                        <a href="#">RentEase</a>
+                </div>
+                    <div class="md:hidden">
+                        <button type="button" class="block text-gray-800 hover:text-gray-700 focus:text-gray-700 focus:outline-none">
+                            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                                <path class="hidden" d="M16.24 14.83a1 1 0 0 1-1.41 1.41L12 13.41l-2.83 2.83a1 1 0 0 1-1.41-1.41L10.59 12 7.76 9.17a1 1 0 0 1 1.41-1.41L12 10.59l2.83-2.83a1 1 0 0 1 1.41 1.41L13.41 12l2.83 2.83z"/>
+                                <path d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row hidden md:block -mx-2">
+                    <a href="#" class="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2">Home</a>
+                    <a href="#" class="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2">About</a>
+                    <a href="#" class="text-gray-800 rounded hover:bg-gray-900 hover:text-gray-100 hover:font-medium py-2 px-2 md:mx-2">Contact</a>
+                </div>
+            </div>
+        </nav>
+        <div class="flex bg-white" style="height:600px;">
+            <div class="flex items-center text-center lg:text-left px-8 md:px-12 lg:w-1/2">
+                <div>
+                   <h2 class="text-3xl font-semibold text-gray-800 md:text-4xl">RentEase est votre solution <span class="text-indigo-600"><span class="text-green-600">tout-en-un pour simplifier la gestion de vos locations</span></span></h2>
+
+                    <p class="mt-2 text-sm text-gray-500 md:text-base">Que vous soyez propriétaire d'une seule propriété ou d'un portefeuille immobilier étendu, RentEase vous offre les outils nécessaires pour gérer efficacement vos locations!</p>
+                    <div class="flex justify-center lg:justify-start mt-6">
+                        <a class="px-4 py-3 bg-gray-900 text-gray-200 text-xs font-semibold rounded hover:bg-gray-800" href="/home">Voir plus</a>
+                        <a class="mx-4 px-4 py-3 bg-gray-300 text-gray-900 text-xs font-semibold rounded hover:bg-gray-400" href="home/login">Se Connecter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="hidden lg:block lg:w-1/2" style="clip-path:polygon(10% 0, 100% 0%, 100% 100%, 0 100%)">
+                <div class="h-full object-cover" style="background-image: url(https://luxury-houses.net/wp-content/uploads/2020/09/An-Unforgettably-Elegant-Delray-Beach-Home-for-Sale-23-768x511.jpg)">
+                    <div class="h-full bg-black opacity-25"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
+{% endblock %}
